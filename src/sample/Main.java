@@ -12,10 +12,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("UI/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("UI/nontitlebar/Login.fxml"));
         primaryStage.setScene(new Scene(root));
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
-        ResizeHelper.addResizeListener(primaryStage);
+        primaryStage.setTitle("Hospital Record Management System");
         primaryStage.show();
     }
 

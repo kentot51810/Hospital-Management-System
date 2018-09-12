@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="1085.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="562.0" prefWidth="219.0" style="-fx-background-color: #101B1C;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" ripplerFill="#797979" text="Patient" textFill="WHITE" />
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" ripplerFill="#797979" text="Check-up" textFill="WHITE" />
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" ripplerFill="#797979" text="Users" textFill="WHITE" />
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" ripplerFill="#797979" text="Reports" textFill="WHITE" />
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" ripplerFill="#797979" text="Tools &amp; Maintenance" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" text="Settings" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="GEAR" size="1.8EM" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="60.0" prefWidth="219.0" text="Contact Support" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PHONE" size="1.8EM" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="94.0" prefWidth="219.0" style="-fx-background-color: #009571;">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="MEDKIT" size="5EM" />
+                        <VBox alignment="CENTER" prefWidth="129.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: quicksand; -fx-font-size: 1.2em; -fx-font-weight: bold;" text="Health Record" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: quicksand; -fx-font-size: 1.2em; -fx-font-weight: bold;" text="Monitoring" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: quicksand; -fx-font-size: 1.2em; -fx-font-weight: bold;" text="System" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="94.0" prefWidth="557.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXBadge>
+                     <children>
+                        <FontAwesomeIcon glyphName="BELL" size="1.8em" />
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </JFXBadge>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../drawable/User_Male_colored.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Account Name">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <FontAwesomeIcon glyphName="ANGLE_DOWN" size="1.8em" />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" prefWidth="0.0" HBox.hgrow="NEVER">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="ANGLE_DOWN" size="1.8em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
