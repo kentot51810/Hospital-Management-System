@@ -27,7 +27,7 @@ public class Login implements Initializable {
         //maybe a permission from a database
 
         Node node = (Node) event.getSource();
-        navigator.navigateTo(node, "/sample/UI/nontitlebar/dashboard");
+        navigator.navigateSceneTo(node, "/sample/UI/nontitlebar/dashboard");
 
     }
 
@@ -35,7 +35,7 @@ public class Login implements Initializable {
     void signUp(ActionEvent event) {
         Node node = (Node) event.getSource();
 
-        navigator.navigateTo(node, "/sample/UI/nontitlebar/signup");
+        navigator.navigateSceneTo(node, "/sample/UI/nontitlebar/signup");
     }
 
 

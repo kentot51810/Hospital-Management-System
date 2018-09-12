@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.input.MouseEvent;
 import sample.helper.Navigator;
 
 import java.net.URL;
@@ -17,7 +16,7 @@ public class SignUp implements Initializable {
     @FXML
     void login(ActionEvent event) {
         Node node = (Node) event.getSource();
-        navigator.navigateTo(node, "/sample/UI/nontitlebar/login");
+        navigator.navigateSceneTo(node, "/sample/UI/nontitlebar/login");
     }
 
     @FXML

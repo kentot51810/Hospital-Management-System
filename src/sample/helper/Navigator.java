@@ -5,6 +5,8 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,7 +18,7 @@ public class Navigator implements Navigation {
 
 
     @Override
-    public void navigateTo(Node node, String dir) {
+    public void navigateSceneTo(Node node, String dir) {
         try {
             root = FXMLLoader.load(getClass().getResource(dir + ".fxml"));
         } catch (IOException e) {
@@ -30,23 +32,29 @@ public class Navigator implements Navigation {
         stage = (Stage) node.getScene().getWindow();
         stage.setScene(scene);
 
+        centerOnScreen(stage);
+
+    }
+
+    public void changeCenterLayout(BorderPane borderPane, String dir){
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource(dir + ".fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        borderPane.setCenter(root);
     }
 
     // TODO: 012, 12, Sep, 2018  Fix This
     //Fix this please.
-    private void centerOnScreen(){
+    private void centerOnScreen(Stage stage){
         float CENTER_ON_SCREEN_X_FRACTION = 1.0f / 2;
         float CENTER_ON_SCREEN_Y_FRACTION = 1.0f / 3;
 
 
-//        Rectangle2D bounds = getWindowScreen().getVisualBounds();
-
-
-//        double centerX = bounds.getMinX() + (bounds.getWidth() - getWidth())
-//                * CENTER_ON_SCREEN_X_FRACTION;
-//        double centerY = bounds.getMinY() + (bounds.getHeight() - getHeight())
-//                * CENTER_ON_SCREEN_Y_FRACTION;
-//        x.set(centerX);
-//        y.set(centerY);
+        Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        stage.setX((primScreenBounds.getWidth() - stage.getWidth()) / 2);
+        stage.setY((primScreenBounds.getHeight() - stage.getHeight()) / 2);
     }
 }
